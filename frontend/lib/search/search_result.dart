@@ -116,6 +116,15 @@ class _SearchResultCardState extends State<SearchResultCard> {
                       TagChip(
                         tag: AppLocalizations.of(context).custom.toUpperCase(),
                       ),
+                    if (widget.species.commonName != null)
+                      Text(
+                        widget.species.commonName!,
+                        softWrap: false,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            color: Colors
+                                .white), // Make text color white for better contrast
+                      ),
                     Text(
                       widget.species.scientificName,
                       softWrap: false,
@@ -210,6 +219,15 @@ class _SearchResultCardState extends State<SearchResultCard> {
                     if (widget.species.creator == "USER")
                       TagChip(
                         tag: AppLocalizations.of(context).custom.toUpperCase(),
+                      ),
+                    if (widget.species.commonName != null)
+                      Text(
+                        widget.species.commonName!,
+                        softWrap: false,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            color: Colors
+                                .white), // Make text color white for better contrast
                       ),
                     Text(
                       widget.species.scientificName,

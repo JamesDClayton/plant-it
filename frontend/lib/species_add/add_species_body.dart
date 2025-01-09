@@ -32,6 +32,11 @@ class _AddSpeciesBodyState extends State<AddSpeciesBody> {
               padding: EdgeInsets.zero,
               children: [
                 EditableSimpleInfoEntry(
+                  title: AppLocalizations.of(context).commonName,
+                  value: widget.species.commonName,
+                  onChanged: (c) => widget.species.commonName = c,
+                ),
+                EditableSimpleInfoEntry(
                   title: AppLocalizations.of(context).family,
                   value: widget.species.family,
                   onChanged: (f) => widget.species.family = f,

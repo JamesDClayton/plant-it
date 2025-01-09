@@ -11,6 +11,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class BotanicalInfoDTO {
     @Schema(description = "ID of the botanical info.", accessMode = Schema.AccessMode.READ_ONLY)
     private Long id;
+    @Schema(description = "Common name of the botanical info.", accessMode = Schema.AccessMode.READ_ONLY)
+    private String commonName;
     @Schema(description = "Scientific name of the botanical info.", accessMode = Schema.AccessMode.READ_ONLY)
     private String scientificName;
     @Schema(description = "Synonyms of the botanical info.")
@@ -46,6 +48,14 @@ public class BotanicalInfoDTO {
         this.id = id;
     }
 
+    public String getCommonName() {
+        return commonName;
+    }
+
+
+    public void setCommonName(String commonName) {
+        this.commonName = commonName;
+    }
 
     public String getScientificName() {
         return scientificName;

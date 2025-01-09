@@ -31,6 +31,9 @@ class _SpeciesDetailsTabState extends State<SpeciesDetailsTab> {
                 ? generateSkeleton(3, widget.isLoading)
                 : [
                     SimpleInfoEntry(
+                        title: AppLocalizations.of(context).commonName,
+                        value: widget.species.commonName),
+                    SimpleInfoEntry(
                         title: AppLocalizations.of(context).family,
                         value: widget.species.family),
                     SimpleInfoEntry(

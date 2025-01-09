@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 class SpeciesDTO {
   int? id;
+  String? commonName;
   String scientificName;
   List<String>? synonyms;
   String? family;
@@ -17,6 +18,7 @@ class SpeciesDTO {
 
   SpeciesDTO({
     this.id,
+    this.commonName,
     required this.scientificName,
     this.synonyms,
     this.family,
@@ -35,6 +37,7 @@ class SpeciesDTO {
     return SpeciesDTO(
       id: json['id'],
       scientificName: json['scientificName'],
+      commonName: json['commonName'],
       synonyms: json['synonyms'].toString().split(","),
       family: json['family'],
       genus: json['genus'],
@@ -53,6 +56,7 @@ class SpeciesDTO {
     return {
       if (id != null) 'id': id,
       'scientificName': scientificName,
+      if (commonName != null) 'commonName': commonName,
       if (synonyms != null) 'synonyms': synonyms,
       if (family != null) 'family': family,
       if (genus != null) 'genus': genus,

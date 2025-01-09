@@ -125,6 +125,7 @@
   "noInfoAvailable": "无可用信息",
   "species": "物种",
   "plant": "植物",
+  "commonName": "通用名",
   "scientificClassification": "科学分类",
   "family": "科",
   "genus": "属",

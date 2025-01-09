@@ -121,6 +121,7 @@
   "noInfoAvailable": "No info available",
   "species": "Species",
   "plant": "Plant",
+  "commonName": "Common Name",
   "scientificClassification": "Scientific classification",
   "family": "Family",
   "genus": "Genus",

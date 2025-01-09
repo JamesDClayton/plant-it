@@ -44,6 +44,7 @@ public class BotanicalInfo implements Serializable, ImageTarget {
     @Column(name = "synonym_value")
     private Set<String> synonyms = new HashSet<>();
     private String family;
+    private String common;
     private String genus;
     private String species;
     @Embedded
@@ -116,6 +117,13 @@ public class BotanicalInfo implements Serializable, ImageTarget {
         this.species = species;
     }
 
+    public String getCommon() {
+        return common;
+    }
+
+    public void setCommon(String common) {
+        this.common = common;
+    }
 
     public PlantCareInfo getPlantCareInfo() {
         // see https://coderanch.com/t/629485/databases/columns-Embedded-field-NULL-JPA
@@ -212,14 +220,14 @@ public class BotanicalInfo implements Serializable, ImageTarget {
 
     @Override
     public int hashCode() {
-        return Objects.hash(scientificName, family, genus, species);
+        return Objects.hash(scientificName, family, genus, species, common);
     }
 
 
     @SuppressWarnings("BooleanExpressionComplexity") //FIXME
     private boolean fieldEquals(BotanicalInfo that) {
         return Objects.equals(scientificName, that.scientificName) && Objects.equals(family, that.family) &&
-                   Objects.equals(genus, that.genus) && Objects.equals(species, that.species) &&
+                   Objects.equals(genus, that.genus) && Objects.equals(species, that.species) && Objects.equals(common, that.common) &&
                    Objects.equals(externalId, that.externalId);
     }
 }

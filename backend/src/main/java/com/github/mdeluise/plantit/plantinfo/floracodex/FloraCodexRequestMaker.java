@@ -80,6 +80,9 @@ public class FloraCodexRequestMaker {
     private void fillFloraCodexInfo(JsonElement plantResult, BotanicalInfo botanicalInfo) {
         final JsonObject plantJson = plantResult.getAsJsonObject();
         botanicalInfo.setExternalId(plantJson.get("id").getAsString());
+        if (!isJsonValueNull(plantJson, "common_name")) {
+            botanicalInfo.setExternalId(plantJson.get("common_name").getAsString());
+        }
         botanicalInfo.setSpecies(plantJson.get("scientific_name").getAsString());
         botanicalInfo.setFamily(plantJson.get("family").getAsString());
         botanicalInfo.setGenus(plantJson.get("genus").getAsString());

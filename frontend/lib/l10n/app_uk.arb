@@ -127,6 +127,7 @@
   "noInfoAvailable": "Немає доступної інформації",
   "species": "Вид",
   "plant": "Рослина",
+  "commonName": "Common Name",
   "scientificClassification": "Наукова класифікація",
   "family": "Родина",
   "genus": "Рід",

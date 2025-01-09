@@ -127,6 +127,7 @@
   "noInfoAvailable": "Ingen information tilgængelig",
   "species": "Species",
   "plant": "Plante",
+  "commonName": "Fælles navn",
   "scientificClassification": "Videnskabelig klassifikation",
   "family": "Familie",
   "genus": "Slægt",

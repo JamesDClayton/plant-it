@@ -127,6 +127,7 @@
   "noInfoAvailable": "Информация недоступна",
   "species": "Вид",
   "plant": "Растение",
+  "commonName": "Общее имя",
   "scientificClassification": "Научная классификация",
   "family": "Семейство",
   "genus": "Сорт",
